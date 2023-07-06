@@ -1,5 +1,7 @@
 package es.virtualhit.virtualteleportapi.teleport;
 
+import org.bukkit.Location;
+
 import java.util.UUID;
 
 public interface TeleportService {
@@ -20,4 +22,6 @@ public interface TeleportService {
      * @param updateLastPosition
      */
     void teleport(UUID uuid, TeleportPoint teleportPoint, boolean updateLastPosition);
+
+    TeleportPoint getTeleportPointFromLocation(Location location);
 }
