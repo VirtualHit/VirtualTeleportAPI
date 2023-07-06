@@ -14,11 +14,9 @@ public class User {
     private HashMap<String, Home> homes;
     private UUID lastTPARequest;
 
-    public User(UUID uuid, TeleportPoint lastPosition, HashMap<String, Home> homes) {
+    public User(UUID uuid) {
         this.uuid = uuid;
-
-        this.lastPosition = lastPosition;
-        this.homes = homes;
+        this.homes = new HashMap<>();
     }
 
     public UUID getUuid() {
@@ -39,5 +37,13 @@ public class User {
 
     public void setHomes(HashMap<String, Home> homes) {
         this.homes = homes;
+    }
+
+    public UUID getLastTPARequest() {
+        return lastTPARequest;
+    }
+
+    public void setLastTPARequest(UUID lastTPARequest) {
+        this.lastTPARequest = lastTPARequest;
     }
 }
