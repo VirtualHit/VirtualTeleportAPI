@@ -13,7 +13,7 @@ public interface TeleportService {
      * @param countdown
      * @param updateLastPosition
      */
-    void teleport(UUID uuid, TeleportPoint teleportPoint, boolean countdown, boolean updateLastPosition);
+    void teleport(UUID uuid, TeleportPoint teleportPoint, int countdown, boolean updateLastPosition);
 
     /**
      * Teleport a player to a TeleportPoint with default countdown.
