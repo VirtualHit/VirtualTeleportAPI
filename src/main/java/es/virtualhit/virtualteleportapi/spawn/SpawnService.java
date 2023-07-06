@@ -6,4 +6,5 @@ public interface SpawnService {
 
     Optional<Spawn> getSpawn();
     void setSpawn(Spawn spawn);
+    void loadSpawnToRedis();
 }
