@@ -2,6 +2,7 @@ package es.virtualhit.virtualteleportapi.teleport;
 
 import org.bukkit.Location;
 
+import java.util.Optional;
 import java.util.UUID;
 
 public interface TeleportService {
@@ -25,5 +26,5 @@ public interface TeleportService {
 
     TeleportPoint getTeleportPointFromLocation(Location location);
 
-    Location getLocationFromTeleportPoint(TeleportPoint teleportPoint);
+    Optional<Location> getLocationFromTeleportPoint(TeleportPoint teleportPoint);
 }
