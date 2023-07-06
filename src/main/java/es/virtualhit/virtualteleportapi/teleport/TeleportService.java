@@ -24,4 +24,6 @@ public interface TeleportService {
     void teleport(UUID uuid, TeleportPoint teleportPoint, boolean updateLastPosition);
 
     TeleportPoint getTeleportPointFromLocation(Location location);
+
+    Location getLocationFromTeleportPoint(TeleportPoint teleportPoint);
 }
