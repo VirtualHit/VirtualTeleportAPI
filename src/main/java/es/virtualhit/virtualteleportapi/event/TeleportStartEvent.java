@@ -6,6 +6,10 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Called when a player is going to be teleported. After the countdown and after updating the last position.
+ * Before the teleport.
+ */
 public class TeleportStartEvent extends PlayerEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();
