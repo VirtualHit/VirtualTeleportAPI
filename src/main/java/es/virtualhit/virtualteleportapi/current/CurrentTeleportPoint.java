@@ -1,4 +1,4 @@
-package es.virtualhit.virtualteleportapi.request;
+package es.virtualhit.virtualteleportapi.current;
 
 import es.virtualhit.virtualteleportapi.teleport.TeleportPoint;
 

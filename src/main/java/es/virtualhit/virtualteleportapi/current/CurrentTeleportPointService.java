@@ -1,4 +1,4 @@
-package es.virtualhit.virtualteleportapi.request;
+package es.virtualhit.virtualteleportapi.current;
 
 import java.util.Optional;
 import java.util.UUID;
