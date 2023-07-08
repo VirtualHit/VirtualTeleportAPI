@@ -4,25 +4,21 @@ import es.virtualhit.virtualteleportapi.teleport.TeleportPoint;
 
 import java.util.UUID;
 
-public class CurrentTeleportPoint extends TeleportPoint {
+public class CurrentTeleportPoint {
 
     private final UUID owner;
+    private final TeleportPoint teleportPoint;
 
     public CurrentTeleportPoint(UUID owner, TeleportPoint teleportPoint) {
-        super(
-                teleportPoint.getServer(),
-                teleportPoint.getWorld(),
-                teleportPoint.getX(),
-                teleportPoint.getY(),
-                teleportPoint.getZ(),
-                teleportPoint.getYaw(),
-                teleportPoint.getPitch()
-        );
-
         this.owner = owner;
+        this.teleportPoint = teleportPoint;
     }
 
     public UUID getOwner() {
         return owner;
+    }
+
+    public TeleportPoint getTeleportPoint() {
+        return teleportPoint;
     }
 }
