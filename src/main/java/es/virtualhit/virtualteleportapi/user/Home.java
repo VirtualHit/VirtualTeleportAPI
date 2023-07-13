@@ -2,14 +2,20 @@ package es.virtualhit.virtualteleportapi.user;
 
 import es.virtualhit.virtualteleportapi.teleport.TeleportPoint;
 
-import java.util.UUID;
-
 public class Home extends TeleportPoint {
 
     private String name;
 
-    public Home(String server, UUID world, double x, double y, double z, float yaw, float pitch, String name) {
-        super(server, world, x, y, z, yaw, pitch);
+    public Home(TeleportPoint teleportPoint, String name) {
+        super(
+                teleportPoint.getServer(),
+                teleportPoint.getWorld(),
+                teleportPoint.getX(),
+                teleportPoint.getY(),
+                teleportPoint.getZ(),
+                teleportPoint.getYaw(),
+                teleportPoint.getPitch()
+        );
         this.name = name;
     }
 
