@@ -9,4 +9,5 @@ public interface WarpService {
     void removeWarp(String name);
     boolean existsWarp(String name);
     Warp[] getWarps();
+    void loadWarpsToRedis();
 }
