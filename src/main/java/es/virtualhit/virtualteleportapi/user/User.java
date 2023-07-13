@@ -13,6 +13,7 @@ public class User {
     private TeleportPoint lastPosition;
     private HashMap<String, Home> homes;
     private UUID lastTPARequest;
+    private TeleportPoint bed;
 
     public User(UUID uuid) {
         this.uuid = uuid;
@@ -45,5 +46,13 @@ public class User {
 
     public void setLastTPARequest(UUID lastTPARequest) {
         this.lastTPARequest = lastTPARequest;
+    }
+
+    public TeleportPoint getBed() {
+        return bed;
+    }
+
+    public void setBed(TeleportPoint bed) {
+        this.bed = bed;
     }
 }
