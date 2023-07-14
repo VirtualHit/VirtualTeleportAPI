@@ -24,6 +24,10 @@ public interface TeleportService {
      */
     void teleport(UUID uuid, TeleportPoint teleportPoint, boolean updateLastPosition, boolean silent);
 
+    void teleport(UUID teleported, UUID target, int countdown, boolean updateLastPosition, boolean silent);
+
+    void teleport(UUID teleported, UUID target, boolean updateLastPosition, boolean silent);
+
     TeleportPoint getTeleportPointFromLocation(Location location);
 
     Optional<Location> getLocationFromTeleportPoint(TeleportPoint teleportPoint);
