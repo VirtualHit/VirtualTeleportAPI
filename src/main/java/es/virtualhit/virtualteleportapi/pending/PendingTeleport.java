@@ -7,8 +7,9 @@ import java.util.UUID;
 public class PendingTeleport extends TeleportPoint {
 
     private final UUID uuid;
+    private final boolean silent;
 
-    public PendingTeleport(UUID uuid, TeleportPoint teleportPoint) {
+    public PendingTeleport(UUID uuid, TeleportPoint teleportPoint, boolean silent) {
         super(
                 teleportPoint.getServer(),
                 teleportPoint.getWorld(),
@@ -20,9 +21,14 @@ public class PendingTeleport extends TeleportPoint {
         );
 
         this.uuid = uuid;
+        this.silent = silent;
     }
 
     public UUID getUuid() {
         return uuid;
+    }
+
+    public boolean isSilent() {
+        return silent;
     }
 }
