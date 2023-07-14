@@ -5,6 +5,7 @@ import es.virtualhit.virtualteleportapi.pending.PendingTeleportService;
 import es.virtualhit.virtualteleportapi.spawn.SpawnService;
 import es.virtualhit.virtualteleportapi.teleport.TeleportService;
 import es.virtualhit.virtualteleportapi.tpa.TPAService;
+import es.virtualhit.virtualteleportapi.user.UserService;
 import es.virtualhit.virtualteleportapi.warp.WarpService;
 
 public interface VirtualTeleportAPI {
@@ -15,4 +16,5 @@ public interface VirtualTeleportAPI {
     PendingTeleportService getPendingTeleportService();
     CurrentTeleportPointService getCurrentTeleportPointService();
     TPAService getTPAService();
+    UserService getUserService();
 }
