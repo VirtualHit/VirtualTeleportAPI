@@ -14,10 +14,12 @@ public class TeleportStartEvent extends PlayerEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();
     private final TeleportPoint teleportPoint;
+    private final boolean silent;
 
-    public TeleportStartEvent(Player player, TeleportPoint teleportPoint) {
+    public TeleportStartEvent(Player player, TeleportPoint teleportPoint, boolean silent) {
         super(player);
         this.teleportPoint = teleportPoint;
+        this.silent = silent;
     }
 
     @Override
@@ -31,5 +33,9 @@ public class TeleportStartEvent extends PlayerEvent {
 
     public TeleportPoint getTeleportPoint() {
         return teleportPoint;
+    }
+
+    public boolean isSilent() {
+        return silent;
     }
 }

@@ -14,12 +14,14 @@ public class TeleportCountdownEvent extends PlayerEvent {
     private final TeleportPoint teleportPoint;
     private final int remainingSeconds;
     private final int totalSeconds;
+    private final boolean silent;
 
-    public TeleportCountdownEvent(Player player, TeleportPoint teleportPoint, int remainingSeconds, int totalSeconds) {
+    public TeleportCountdownEvent(Player player, TeleportPoint teleportPoint, int remainingSeconds, int totalSeconds, boolean silent) {
         super(player);
         this.teleportPoint = teleportPoint;
         this.remainingSeconds = remainingSeconds;
         this.totalSeconds = totalSeconds;
+        this.silent = silent;
     }
 
     @Override
@@ -41,5 +43,9 @@ public class TeleportCountdownEvent extends PlayerEvent {
 
     public int getTotalSeconds() {
         return totalSeconds;
+    }
+
+    public boolean isSilent() {
+        return silent;
     }
 }
