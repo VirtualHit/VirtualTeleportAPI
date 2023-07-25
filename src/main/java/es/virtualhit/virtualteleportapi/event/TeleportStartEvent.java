@@ -43,7 +43,7 @@ public class TeleportStartEvent extends PlayerEvent implements Cancellable {
 
     @Override
     public boolean isCancelled() {
-        return false;
+        return cancelled;
     }
 
     @Override
