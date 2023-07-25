@@ -18,8 +18,8 @@ public class TeleportStartEvent extends PlayerEvent implements Cancellable {
     private final boolean silent;
     private boolean cancelled;
 
-    public TeleportStartEvent(Player player, TeleportPoint teleportPoint, boolean silent) {
-        super(player);
+    public TeleportStartEvent(Player player, boolean async, TeleportPoint teleportPoint, boolean silent) {
+        super(player, async);
         this.teleportPoint = teleportPoint;
         this.silent = silent;
     }

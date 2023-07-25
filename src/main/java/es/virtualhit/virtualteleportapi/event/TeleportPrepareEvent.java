@@ -16,8 +16,8 @@ public class TeleportPrepareEvent extends PlayerEvent {
     private final int countdown;
     private final boolean silent;
 
-    public TeleportPrepareEvent(Player player, TeleportPoint teleportPoint, int countdown, boolean silent) {
-        super(player);
+    public TeleportPrepareEvent(Player player, boolean async, TeleportPoint teleportPoint, int countdown, boolean silent) {
+        super(player, async);
         this.teleportPoint = teleportPoint;
         this.countdown = countdown;
         this.silent = silent;

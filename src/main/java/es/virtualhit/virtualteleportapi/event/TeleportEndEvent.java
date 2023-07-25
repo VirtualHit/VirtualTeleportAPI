@@ -17,8 +17,8 @@ public class TeleportEndEvent extends PlayerEvent {
     private final TeleportPoint teleportPoint;
     private final boolean silent;
 
-    public TeleportEndEvent(Player player, TeleportPoint teleportPoint, boolean silent) {
-        super(player);
+    public TeleportEndEvent(Player player, boolean async, TeleportPoint teleportPoint, boolean silent) {
+        super(player, async);
         this.teleportPoint = teleportPoint;
         this.silent = silent;
     }

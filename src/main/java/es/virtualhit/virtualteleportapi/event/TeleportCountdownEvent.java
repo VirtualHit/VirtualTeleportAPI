@@ -16,8 +16,8 @@ public class TeleportCountdownEvent extends PlayerEvent {
     private final int totalSeconds;
     private final boolean silent;
 
-    public TeleportCountdownEvent(Player player, TeleportPoint teleportPoint, int remainingSeconds, int totalSeconds, boolean silent) {
-        super(player);
+    public TeleportCountdownEvent(Player player, boolean async, TeleportPoint teleportPoint, int remainingSeconds, int totalSeconds, boolean silent) {
+        super(player, async);
         this.teleportPoint = teleportPoint;
         this.remainingSeconds = remainingSeconds;
         this.totalSeconds = totalSeconds;
