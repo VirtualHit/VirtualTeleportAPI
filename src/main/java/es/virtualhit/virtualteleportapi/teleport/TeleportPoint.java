@@ -76,4 +76,22 @@ public class TeleportPoint {
     public void setPitch(float pitch) {
         this.pitch = pitch;
     }
+
+    @Override
+    public int hashCode() {
+        return server.hashCode() + world.hashCode() + (int) x + (int) y + (int) z + (int) yaw + (int) pitch;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof TeleportPoint teleportPoint)) return false;
+
+        return teleportPoint.getServer().equals(server)
+                && teleportPoint.getWorld().equals(world)
+                && teleportPoint.getX() == x
+                && teleportPoint.getY() == y
+                && teleportPoint.getZ() == z
+                && teleportPoint.getYaw() == yaw
+                && teleportPoint.getPitch() == pitch;
+    }
 }
